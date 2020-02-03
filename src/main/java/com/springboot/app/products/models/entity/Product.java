@@ -13,12 +13,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-//@Getter @Setter @NoArgsConstructor
+
 @Entity
 @Table(name = "products")
 public class Product implements Serializable{	
@@ -26,12 +22,9 @@ public class Product implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	private Long id;
-	//@Getter @Setter
-	private String name;
-	//@Getter @Setter
-	private Double price;
-	//@Getter @Setter
+	private Long id;	
+	private String name;	
+	private Double price;	
 	@Column(name="create_at")
 	@Temporal(TemporalType.DATE)
 	private Date createAt;
@@ -82,5 +75,6 @@ public class Product implements Serializable{
 	public void setPort(Integer port) {
 		this.port = port;
 	}	
-
+	
+	
 }
