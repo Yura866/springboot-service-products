@@ -38,12 +38,15 @@ public class ProductController {
 	private Product detail(@PathVariable Long id) throws Exception{
 		Product product = productService.findById(id);
 		//product.setPort(Integer.parseInt(env.getProperty("local.server.port")));
-		product.setPort(port);
+		product.setPort(port);		
+/*
+		try {
+			Thread.sleep(2000L);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		*/
 		
-		/*boolean ok=false;
-		if (ok==false) {
-			throw new Exception("Can't charge the product");
-		}*/
 		return product;
 	}
 	
